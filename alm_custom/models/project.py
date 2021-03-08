@@ -16,7 +16,7 @@ class ProjectInherit(models.Model):
 class ProjectTask(models.Model):
     _inherit = 'project.task'
 
-    work_order = fields.Many2one('mrp.workorder', string="Work Order")
+    work_ogrder = fields.Many2one('mrp.workorder', string="Work Order")
     responsibility = fields.Selection([('ppc','PPC'),('design','Design'),('manufacturing','Manufacturing')],"Responsibility")
     start_date = fields.Date("Date Start",default=fields.Datetime.now)
     inc_sequence = fields.Char()
